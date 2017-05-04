@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+  div.row
+    div.col-md-6
+      h1= title
+      ul
+        li 
+          a(href='/') Back
+        li 
+          a(href='api/notification') API Notification List
+        li
+          a(href='api/notification/store') API Notification Create
+    div.col-md-6
+      h1 Create #{title}
+      form.form-horizontal(action='/notification/store', method='POST', placeholder='Token')
+        div.from-group
+          label.control-label.bold Token
+          input.from-control(type='text', name='token', value='#{config.token}')
+        div.from-group
+          label.control-label.bold Sender ID
+          input.from-control(type='number', name='sender_id', min='0', value='#{config.sender_id}')
+        div.from-group
+        - const typeArray = ['Appointment','Follower','Transfer','Order receive','Cancel','Exchange','Return','Friend from Facebook']
+        - each item in typeArray
+          - console.log(item)
+          div.radio
+            label
+              input(type='radio', name='type', value='#{item}' required)
+              span= item
+        div.from-group
+          button.btn.btn-primary(type='submit') Submit
