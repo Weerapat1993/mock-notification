@@ -30,17 +30,30 @@ NotificationAPI.index = function(req, res, next) {
       case 'Friend from Facebook': body = 'Your friend from facebook joined Shopbank as'; break;
       default: body = 'Error Notification !!';
     }
+    var bool = false;
+    switch (random.rand(1,10)) {
+      case 1: bool = true; break;
+      default: bool = false;
+    }
     data = {
       title: typeArray[i],
       body: body,
       remote: true,
-      readable: false,
+      readable: bool,
       user_id: random.rand(100000,300000),
       sender_id: random.rand(100000,300000),
       amount: random.rand(-100, 100) * 10,
-      created_at: new Date().getTime(),
-      updated_at: new Date().getTime(),
+      created_at: new Date().getTime() - (i * 600000),
+      updated_at: new Date().getTime() - (i * 600000),
       token: config.token,
+      products: [
+        'http://localhost:8000/assets/images/01.jpg',
+        'http://localhost:8000/assets/images/02.jpg',
+        'http://localhost:8000/assets/images/03.jpg',
+        'http://localhost:8000/assets/images/04.jpg',
+        'http://localhost:8000/assets/images/05.jpg',
+        'http://localhost:8000/assets/images/06.jpg',
+      ]
     };
     array.push(data);
   }
