@@ -10,7 +10,7 @@ var NotificationController = require(path + 'NotificationController');
 router.get('/', HomeController.index);
 
 // NotificationController
-router.get('/notification', NotificationController.index);
-router.post('/notification/store', NotificationController.store);
+router.get('/notifications', NotificationController.index);
+router.post('/notifications/store', NotificationController.store);
 
 module.exports = router;

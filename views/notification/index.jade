@@ -8,12 +8,12 @@ block content
         li 
           a(href='/') Back
         li 
-          a(href='api/notification') API Notification List
+          a(href='api/v1/notifications') API Notification List
         li
-          a(href='api/notification/store') API Notification Create
+          a(href='api/v1/notifications/store') API Notification Create
     div.col-md-6
       h1 Create #{title}
-      form.form-horizontal(action='/notification/store', method='POST', placeholder='Token')
+      form.form-horizontal(action='/notifications/store', method='POST', placeholder='Token')
         div.from-group
           label.control-label.bold Token
           input.from-control(type='text', name='token', value='#{config.token}')

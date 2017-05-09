@@ -57,7 +57,11 @@ NotificationAPI.index = function(req, res, next) {
     };
     array.push(data);
   }
-  res.send(array);
+  res.send({
+    data: array,
+    code: 200,
+    status: 'OK'  
+  });
 }
 
 // CRAETE PUSH NOTIFICATION

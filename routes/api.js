@@ -6,7 +6,7 @@ var path = '../app/API/';
 var NotificationAPI = require(path + 'NotificationAPI');
 
 // API =================================================
-router.get('/notification', NotificationAPI.index);
-router.get('/notification/store', NotificationAPI.store);
+router.get('/notifications', NotificationAPI.index);
+router.get('/notifications/store', NotificationAPI.store);
 
 module.exports = router;
