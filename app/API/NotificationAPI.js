@@ -103,3 +103,13 @@ NotificationAPI.store = function(req, res, next) {
   };
   res.send(fcm);
 }
+
+// READ ALL DATA NOTIFICATION
+NotificationAPI.readAll = function(req, res, next) {
+  const data = {
+    data: [],
+    code: 200,
+    status: 'OK'  
+  }
+  res.send(data);
+}

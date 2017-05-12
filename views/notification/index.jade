@@ -11,6 +11,8 @@ block content
           a(href='api/v1/notifications') API Notification List
         li
           a(href='api/v1/notifications/store') API Notification Create
+        li
+          a(href='api/v1/notifications/read-all') API Notification Mark all as read
     div.col-md-6
       h1 Create #{title}
       form.form-horizontal(action='/notifications/store', method='POST', placeholder='Token')
