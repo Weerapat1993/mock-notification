@@ -4,10 +4,15 @@ var path = '../app/API/';
 
 // Import Class
 var NotificationAPI = require(path + 'NotificationAPI');
+var ContactAPI = require(path + 'ContactAPI');
 
 // API =================================================
 router.get('/notifications', NotificationAPI.index);
 router.get('/notifications/store', NotificationAPI.store);
 router.get('/notifications/read-all', NotificationAPI.readAll);
+
+router.get('/contacts', ContactAPI.index);
+router.post('/contacts/upload', ContactAPI.upload);
+
 
 module.exports = router;
