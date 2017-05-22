@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  div.row
+    div.col-md-6
+      h1= title
+      ul
+        li 
+          a(href='/') Back
+        li 
+          a(href='api/v1/users') API User List
+    div.col-md-6
+      h1 Login #{title}
+      form.form-horizontal(action='api/v1/login', method='POST')
+        div.from-group
+          label.control-label.bold Email
+          input.from-control(type='email', name='email', placeholder='Email', value='admin@example.com')
+        div.from-group
+          label.control-label.bold Password
+          input.from-control(type='password', name='password', placeholder='Password', value='123456')
+        div.from-group
+          button.btn.btn-primary(type='submit') Submit
