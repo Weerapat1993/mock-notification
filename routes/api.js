@@ -18,6 +18,7 @@ router.get('/notifications/read-all', NotificationAPI.readAll);
 
 router.get('/contacts', ContactAPI.index);
 router.post('/contacts', ContactAPI.upload);
+router.get('/contact-groups', ContactAPI.contactGroups);
 
 router.post('/login',AuthAPI.login);
 
