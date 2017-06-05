@@ -4,10 +4,10 @@ block content
   h1= title
   ul
     li
-      a(href='api/v1/contacts') Contact Lists
+      a(href='chat/api/v1/contacts') Contact Lists
     li
-      a(href='api/v1/contact-groups') Contact Groups
+      a(href='chat/api/v1/devices/42f3e017c0a6a2de763t5q1z98/contact-groups') Contact Groups
     li
-      form(action='/api/v1/contacts',method='POST')
+      form(action='chat/api/v1/devices/42f3e017c0a6a2de763t5q1z98',method='POST')
         input(type='hidden', name='contacts')
         button.btn.btn-xs.btn-default(type='submit') Upload Contact

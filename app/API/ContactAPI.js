@@ -72,7 +72,7 @@ ContactAPI.contactGroups = function(req, res, next) {
         contact_group = {
           name: rows[i].name,
           users: users,
-          timestamp: new Date().getTime()
+          timestamp: new Date().getTime() - 60000
         }
         body.push(contact_group);
       });

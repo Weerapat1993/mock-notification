@@ -8,10 +8,10 @@ block content
         li 
           a(href='/') Back
         li 
-          a(href='api/v1/users') API User List
+          a(href='chat/api/v1/users') API User List
     div.col-md-6
       h1 Login #{title}
-      form.form-horizontal(action='api/v1/login', method='POST')
+      form.form-horizontal(action='chat/api/v1/login', method='POST')
         div.from-group
           label.control-label.bold Email
           input.from-control(type='email', name='email', placeholder='Email', value='admin@example.com')
